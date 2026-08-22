@@ -1,0 +1,74 @@
+name: Compile and test examples
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  c:
+    name: C examples
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Compile and run C examples
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          sources=(examples/c/*.c)
+          if (( ${#sources[@]} == 0 )); then
+            echo "No C examples found in examples/c/"
+            exit 1
+          fi
+
+          mkdir -p build/c
+          for source in "${sources[@]}"; do
+            name="$(basename "${source%.c}")"
+            echo "Compiling ${source}"
+            gcc -std=c17 -Wall -Wextra -Wpedantic "${source}" -o "build/c/${name}"
+            echo "Running ${name}"
+            "build/c/${name}"
+          done
+
+  java:
+    name: Java examples
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: none
+
+      - name: Compile and run Java examples
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          sources=(examples/java/*.java)
+          if (( ${#sources[@]} == 0 )); then
+            echo "No Java examples found in examples/java/"
+            exit 1
+          fi
+
+          mkdir -p build/java
+          echo "Compiling ${#sources[@]} Java source file(s)"
+          javac -Xlint:all -d build/java "${sources[@]}"
+
+          for source in "${sources[@]}"; do
+            class_name="$(basename "${source%.java}")"
+            echo "Running ${class_name}"
+            java -cp build/java "${class_name}"
+          done

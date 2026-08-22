@@ -95,6 +95,12 @@ cd KnowHow
 
 O projeto não exige uma ferramenta de publicação específica: os arquivos Markdown devem continuar legíveis no GitHub e em editores comuns.
 
+## Validação automática de código
+
+Os exemplos executáveis de [C e Java](./examples/README.md) são compilados e executados automaticamente pelo [workflow do GitHub Actions](./.github/workflows/compile-examples.yml) em cada push para `main`, Pull Request ou execução manual. O C é compilado com o padrão C17 e avisos habilitados; os exemplos Java são compilados com JDK 21.
+
+Ao adicionar um novo arquivo nessas pastas, mantenha a convenção documentada no README dos exemplos: cada programa deve ter uma entrada executável e terminar sem depender de interação manual.
+
 ## Como contribuir
 
 Antes de criar um conteúdo, leia o [guia de contribuição](./CONTRIBUTING.md) e escolha o [template correspondente](./templates/). Uma contribuição pode corrigir uma explicação, melhorar um exemplo, adicionar um exercício, propor uma referência ou registrar uma lacuna.
@@ -117,7 +123,9 @@ A V1 estabelece a arquitetura, os padrões editoriais, a navegação e uma prime
 - [ ] Desenvolver Git/GitHub, SQL e APIs como trilhas próprias.
 - [ ] Expandir a trilha Web com DOM, eventos, módulos e TypeScript.
 - [ ] Adicionar Linux, Docker e outras tecnologias após validar os padrões.
-- [ ] Criar automações de validação de Markdown e links para o fluxo de contribuição.
+- [x] Criar automações de validação de Markdown e links para o fluxo de contribuição.
+- [x] Configurar GitHub Actions para compilar e executar exemplos de C e Java.
+- [ ] Adicionar compilação automática dos exemplos específicos de outras trilhas.
 
 ## Licenciamento
 

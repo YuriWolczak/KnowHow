@@ -14,6 +14,10 @@ Antes de começar, estude a [trilha de fundamentos](../../../docs/learning-paths
 
 Esta introdução usa C em um ambiente compatível com o padrão C17 quando o compilador permitir, mas os exemplos iniciais procuram usar recursos básicos e portáveis. Comandos de compilação dependem do compilador instalado; confirme a documentação do seu ambiente.
 
+## Exemplos executáveis
+
+Os exemplos independentes de interação em [`examples/c/`](../../../examples/README.md) são compilados com C17 e executados pelo GitHub Actions. Eles mostram soma de algarismos, número primo e FizzBuzz.
+
 ## Próximos passos
 
 Depois desta sequência, a trilha deve abordar ponteiros, arrays e strings, estruturas, alocação dinâmica, arquivos, modularização e ferramentas de compilação com mais profundidade.

@@ -35,8 +35,12 @@ Os seguintes assuntos fazem parte do escopo, mas só devem ser ampliados quando 
 
 A ausência de uma página não é um convite para criar conteúdo superficial. Quando uma nova área for iniciada, ela deve ter um objetivo claro, pré-requisitos, exemplos e conexões com exercícios ou projetos.
 
+## Exercícios de lógica
+
+A pasta [exercises](./exercises/README.md) reúne problemas que podem ser resolvidos em pseudocódigo e depois implementados em C, Java, Python ou JavaScript. Ela inclui soma de algarismos, FizzBuzz, palíndromos, números primos, Fibonacci e contagem de frequência.
+
 ## Como estudar
 
-Leia o conceito, tente explicar com suas próprias palavras, execute ou adapte os exemplos e resolva os exercícios relacionados. Depois, avance para um desafio ou projeto. A [trilha completa para iniciantes](../docs/learning-paths/fundamentals.md) mostra como esses conteúdos se conectam a Python e Git.
+Leia o conceito, tente explicar com suas próprias palavras, execute ou adapte os exemplos e resolva os exercícios relacionados. Depois, avance para um desafio ou projeto. A [trilha completa para iniciantes](../docs/learning-paths/fundamentals.md) mostra como esses conteúdos se conectam a C, Java, Python, Web e Git.
 
 [Voltar para a Knowledge Base](../README.md) · [Ver exercícios](../exercises/README.md) · [Ver projetos](../projects/README.md)
