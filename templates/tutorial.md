@@ -46,7 +46,7 @@
 
 <!-- Aponte para exercícios relacionados por links relativos. -->
 
-- [Exercício relacionado](../exercises/example.md)
+<!-- Adicione aqui um link relativo real para um exercício relacionado. -->
 
 ## 🧩 Desafios
 

@@ -58,4 +58,4 @@
 
 <!-- Inclua a documentação oficial e indique versões quando necessário. -->
 
-[Voltar para tecnologias](../README.md) · [Voltar para a Knowledge Base](../../README.md)
+[Voltar para tecnologias](../README.md) · [Voltar para a Knowledge Base](../README.md)

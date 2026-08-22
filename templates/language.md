@@ -45,4 +45,4 @@
 
 <!-- Inclua aqui a URL real da documentação oficial após verificá-la. -->
 
-[Voltar para linguagens](../README.md) · [Voltar para a Knowledge Base](../../README.md)
+[Voltar para linguagens](../README.md) · [Voltar para a Knowledge Base](../README.md)
