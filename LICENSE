@@ -1,0 +1,56 @@
+# Licenciamento da Knowledge Base
+
+Este repositório contém dois tipos de material. A licença aplicável depende do tipo de arquivo:
+
+## Documentação educacional
+
+Textos, tutoriais, exercícios, desafios, projetos descritos e demais materiais educacionais próprios são disponibilizados sob a **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**.
+
+A licença exige atribuição adequada, um link para a licença e a indicação de alterações. Adaptações devem ser distribuídas sob a mesma licença, observando as condições completas da licença oficial.
+
+Leia o texto legal em:
+
+<https://creativecommons.org/licenses/by-sa/4.0/legalcode>
+
+A página explicativa da Creative Commons está em:
+
+<https://creativecommons.org/licenses/by-sa/4.0/>
+
+## Código
+
+Exemplos de código próprios, scripts e demais código-fonte deste repositório são disponibilizados sob a **MIT License**, salvo indicação diferente no próprio arquivo ou diretório.
+
+```text
+MIT License
+
+Copyright (c) 2026 Yuri Wolczak
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## Material de terceiros
+
+Material de terceiros não recebe automaticamente as licenças acima. Ao incluir conteúdo externo, mantenha a autoria, a licença e os avisos correspondentes; não inclua material cuja licença seja incompatível com a forma de distribuição pretendida.
+
+Este arquivo é uma orientação de organização do repositório, não aconselhamento jurídico. Em caso de dúvida sobre titularidade, compatibilidade ou redistribuição, procure orientação profissional.
+
+Referências oficiais:
+
+- [Creative Commons — CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- [Open Source Initiative — MIT License](https://opensource.org/license/mit/)
