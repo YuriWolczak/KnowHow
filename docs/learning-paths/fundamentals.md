@@ -24,7 +24,16 @@ Esta trilha reduz saltos de conhecimento, mas não impede a consulta independent
 
 ## Aplicação
 
-Depois das etapas iniciais, aplique os conceitos na [trilha de Python](../../languages/python/README.md). Para consolidar, resolva os [exercícios básicos](../../exercises/README.md) e escolha um [projeto iniciante](../../projects/beginner/README.md).
+Depois das etapas iniciais, escolha uma trilha específica. Os fundamentos são compartilhados; cada percurso abaixo ensina a sintaxe, as ferramentas e as decisões próprias de seu ecossistema:
+
+| Trilha | Foco inicial |
+| --- | --- |
+| [C](../../languages/c/README.md) | Fundamentos da linguagem, compilação, memória e programação procedural |
+| [Java](../../languages/java/README.md) | Sintaxe, tipos, classes, objetos e ferramentas do JDK |
+| [Python](../../languages/python/README.md) | Sintaxe expressiva, coleções, funções e automação |
+| [Web](../../languages/web/README.md) | HTML para estrutura, CSS para apresentação e JavaScript para comportamento |
+
+Para consolidar qualquer trilha, resolva os [exercícios básicos](../../exercises/README.md) e escolha um [projeto iniciante](../../projects/beginner/README.md).
 
 ## Como saber se pode avançar?
 

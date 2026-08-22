@@ -29,8 +29,8 @@ Materiais de programação frequentemente ficam espalhados entre tutoriais, docu
 | Área | Finalidade | Estado |
 | --- | --- | --- |
 | [Fundamentals](./fundamentals/README.md) | Conceitos independentes de uma linguagem | Em desenvolvimento |
-| [Languages](./languages/README.md) | Trilhas organizadas por linguagem | Python iniciado |
-| [Technologies](./technologies/README.md) | Ferramentas, frameworks e ecossistemas | Em desenvolvimento |
+| [Languages](./languages/README.md) | Trilhas organizadas por linguagem e ecossistema | C, Java, Python e Web iniciados |
+| [Technologies](./technologies/README.md) | Ferramentas, frameworks e ecossistemas | Git iniciado |
 | [Databases](./databases/README.md) | Fundamentos de dados e tecnologias de banco | Em desenvolvimento |
 | [Exercises](./exercises/README.md) | Prática progressiva e relacionada aos conteúdos | Primeiros exercícios disponíveis |
 | [Challenges](./challenges/README.md) | Problemas mais completos e integradores | Primeiro desafio disponível |
@@ -76,7 +76,7 @@ A primeira trilha foi desenhada para quem parte do absoluto zero:
 12. [Introdução a algoritmos e complexidade](./fundamentals/algorithms-and-complexity.md)
 13. [Introdução a Git](./technologies/git/README.md)
 
-Depois dos fundamentos iniciais, a [trilha de Python](./languages/python/README.md) aplica os conceitos em uma linguagem concreta.
+Depois dos fundamentos iniciais, escolha uma trilha específica: [C](./languages/c/README.md), [Java](./languages/java/README.md), [Python](./languages/python/README.md) ou [Web](./languages/web/README.md). A trilha Web reúne HTML, CSS e JavaScript porque, no desenvolvimento de interfaces, essas tecnologias trabalham em conjunto.
 
 ## Exercícios, desafios e projetos
 
@@ -110,12 +110,12 @@ A V1 estabelece a arquitetura, os padrões editoriais, a navegação e uma prime
 - [x] Criar a estrutura principal e os READMEs de navegação.
 - [x] Definir padrões de tutoriais, exercícios, desafios, projetos, linguagens e tecnologias.
 - [x] Criar a trilha inicial de fundamentos.
-- [x] Iniciar a trilha de Python.
+- [x] Iniciar as trilhas de Python, C, Java e Web.
 - [x] Adicionar exercícios, desafio e projetos iniciais.
 - [ ] Expandir fundamentos com redes, sistemas operacionais, segurança e arquitetura.
 - [ ] Completar uma trilha de Python intermediário com testes, typing, ambientes e pacotes.
 - [ ] Desenvolver Git/GitHub, SQL e APIs como trilhas próprias.
-- [ ] Iniciar JavaScript e TypeScript com conteúdo suficiente para uma trilha coerente.
+- [ ] Expandir a trilha Web com DOM, eventos, módulos e TypeScript.
 - [ ] Adicionar Linux, Docker e outras tecnologias após validar os padrões.
 - [ ] Criar automações de validação de Markdown e links para o fluxo de contribuição.
 
@@ -133,6 +133,9 @@ As referências abaixo são pontos de partida oficiais e não substituem a leitu
 2. [Open Source Initiative — MIT License](https://opensource.org/license/mit/)
 3. [Documentação oficial do Python](https://docs.python.org/3/)
 4. [Documentação oficial do Git](https://git-scm.com/doc)
+5. [GNU C Reference Manual](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)
+6. [Java SE Documentation](https://docs.oracle.com/en/java/javase/25/)
+7. [MDN — Learn web development](https://developer.mozilla.org/en-US/docs/Learn_web_development)
 
 ## Decisões de organização
 

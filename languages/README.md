@@ -2,23 +2,26 @@
 
 > Trilhas de aprendizado organizadas por linguagem de programação.
 
-Uma linguagem deve ser estudada como ferramenta para aplicar fundamentos, não como uma lista de sintaxe. Cada trilha precisa explicar casos de uso, configuração, fundamentos, recursos da linguagem, prática e referências oficiais.
+Cada linguagem ou ecossistema deve ser estudado como ferramenta para aplicar fundamentos, não como uma lista de sintaxe. Cada trilha precisa explicar casos de uso, configuração, fundamentos, recursos específicos, prática e referências oficiais.
+
+A pasta [Fundamentals](../fundamentals/README.md) concentra lógica, algoritmos, estruturas de dados e outros conceitos que continuam válidos em várias linguagens. As trilhas abaixo explicam apenas o que é específico de cada linguagem ou ecossistema.
 
 ## Trilhas disponíveis
 
-| Linguagem | Estado | Próximo ponto de entrada |
+| Trilha | Estado | Próximo ponto de entrada |
 | --- | --- | --- |
+| [C](./c/README.md) | Iniciada | Fundamentos básicos |
+| [Java](./java/README.md) | Iniciada | Fundamentos básicos |
 | [Python](./python/README.md) | Iniciada | Trilha básica |
-| JavaScript | Planejada | Em desenvolvimento |
-| TypeScript | Planejada | Em desenvolvimento |
-| Java | Planejada | Em desenvolvimento |
+| [Web](./web/README.md) | Iniciada | HTML, CSS e JavaScript |
 | C# | Planejada | Em desenvolvimento |
 | Go | Planejada | Em desenvolvimento |
 | Rust | Planejada | Em desenvolvimento |
+| TypeScript | Planejada | Em desenvolvimento, integrado futuramente à trilha Web |
 
 ## Critério para iniciar uma linguagem
 
-Uma linguagem só deve receber o selo de “iniciada” quando houver uma sequência coerente, exemplos executáveis, exercícios relacionados, referências oficiais e uma indicação honesta do que ainda falta. Criar uma pasta vazia ou uma lista de links não constitui uma trilha.
+Uma trilha só deve receber o selo de “iniciada” quando houver uma sequência coerente, exemplos executáveis quando aplicável, exercícios relacionados, referências oficiais e uma indicação honesta do que ainda falta. Criar uma pasta vazia ou uma lista de links não constitui uma trilha.
 
 ## Relação com fundamentos
 
