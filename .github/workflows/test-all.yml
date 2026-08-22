@@ -27,6 +27,26 @@ jobs:
       - name: Run CTest
         run: ctest --test-dir build/tests-c --output-on-failure
 
+  web-unit:
+    name: Web unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: tests/web/package-lock.json
+
+      - name: Install Web test dependencies
+        run: npm ci --prefix tests/web --ignore-scripts
+
+      - name: Run Vitest
+        run: npm --prefix tests/web test
+
   java-unit:
     name: Java unit tests
     runs-on: ubuntu-latest

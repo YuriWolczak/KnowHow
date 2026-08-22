@@ -14,6 +14,7 @@ A regra prática é manter a lógica em funções pequenas e testar seus contrat
 | --- | --- | --- | --- |
 | C | `tests/c/test_logic.c` | Funções `test_*` com `assert` | CMake + CTest |
 | Java | `tests/java/src/main/java/Logic.java` | `LogicTest` com JUnit 5 | Maven + Surefire |
+| Web | `examples/web/logic.js` e `controller.js` | `logic.test.js` e `controller.test.js` | Vitest + jsdom |
 
 Os exemplos executáveis independentes continuam em [`examples/c/`](../../examples/c/) e [`examples/java/`](../../examples/java/). A pasta `tests/` contém a suíte de testes unitários. Essa separação impede que um exemplo didático e uma suíte de teste tenham responsabilidades ambíguas.
 
@@ -47,15 +48,15 @@ O `pom.xml` fixa a versão de JUnit, define `maven.compiler.release` como 21 e c
 
 ## GitHub Actions
 
-O workflow [`.github/workflows/test-all.yml`](../../.github/workflows/test-all.yml) executa testes em cada push para `main`, Pull Request e acionamento manual. Ele usa um job para C e outro para Java.
+O workflow [`.github/workflows/test-all.yml`](../../.github/workflows/test-all.yml) executa testes em cada push para `main`, Pull Request e acionamento manual. Ele possui jobs independentes para C, Web e Java.
 
-O job de C instala ou usa o ambiente `ubuntu-latest`, configura CMake, compila `tests/c` e executa `ctest --output-on-failure`. O job de Java configura Temurin 21 com `actions/setup-java`, usa o cache de dependências do Maven e executa `mvn -B -f tests/java/pom.xml test`.
+O job de C instala ou usa o ambiente `ubuntu-latest`, configura CMake, compila `tests/c` e executa `ctest --output-on-failure`. O job Web configura Node.js 22, instala o lockfile com `npm ci` e executa Vitest. O job de Java configura Temurin 21 com `actions/setup-java`, usa o cache de dependências do Maven e executa `mvn -B -f tests/java/pom.xml test`.
 
 A ideia importante é que o CI rode os mesmos comandos que o script local. Assim, uma falha encontrada antes do push tende a ser a mesma falha observada no Pull Request, e a diferença entre ambientes fica menor [1].
 
 ## Script local antes do push
 
-O script [`scripts/test_all.sh`](../../scripts/test_all.sh) é o ponto único de entrada. Ele valida links Markdown, exemplos Python, exemplos Web estáticos, compila e executa exemplos C e Java, executa CTest e roda os testes Maven.
+O script [`scripts/test_all.sh`](../../scripts/test_all.sh) é o ponto único de entrada. Ele valida links Markdown, exemplos Python, a sintaxe e os testes do exemplo Web, compila e executa exemplos C e Java, executa CTest e roda os testes Maven.
 
 ```bash
 bash scripts/test_all.sh

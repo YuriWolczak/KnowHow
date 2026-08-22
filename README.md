@@ -58,6 +58,8 @@ CONCEITO → EXPLICAÇÃO → EXEMPLO → EXERCÍCIO → DESAFIO → PROJETO
 
 O [padrão de tutorial](./templates/tutorial.md) orienta a explicar objetivo, pré-requisitos, funcionamento, exemplos, erros comuns, boas práticas, exercícios, projetos e referências. Nem todo assunto precisa de todas as seções, mas nenhum conteúdo deve esconder pré-requisitos ou apresentar código sem contexto.
 
+Para ampliar a base com novas linguagens, exemplos e suítes automatizadas, consulte o [guia de extensibilidade](./docs/extending-the-project.md). A estrutura atual de testes está detalhada em [tests/](./tests/README.md), incluindo a suíte Web com Vitest e jsdom.
+
 ## Trilhas
 
 A primeira trilha foi desenhada para quem parte do absoluto zero:

@@ -19,7 +19,7 @@ require_command() {
   fi
 }
 
-for command in python3 node gcc cmake java javac mvn; do
+for command in python3 node npm gcc cmake java javac mvn; do
   require_command "${command}"
 done
 
@@ -33,8 +33,10 @@ test -f examples/web/styles.css
 test -f examples/web/script.js
 grep -q '<!doctype html>' examples/web/index.html
 grep -q 'rel="stylesheet"' examples/web/index.html
-grep -q 'defer' examples/web/index.html
+grep -q 'type="module"' examples/web/index.html
 node --check examples/web/script.js
+npm ci --prefix tests/web --ignore-scripts
+npm --prefix tests/web test
 
 printf '%s\n' '== C examples =='
 mkdir -p "${BUILD_DIR}/c-examples"

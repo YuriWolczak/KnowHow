@@ -20,7 +20,8 @@ def main() -> int:
     errors: list[str] = []
 
     for markdown_file in sorted(root.rglob("*.md")):
-        if ".git" in markdown_file.parts:
+        ignored_parts = {".git", "node_modules", "build", "target"}
+        if any(part in ignored_parts for part in markdown_file.parts):
             continue
         text = markdown_file.read_text(encoding="utf-8")
         for raw_target in LINK_PATTERN.findall(text):
