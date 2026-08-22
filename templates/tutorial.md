@@ -68,6 +68,6 @@
 
 <!-- Prefira documentação oficial e indique a versão quando necessário. -->
 
-- [Fonte oficial — título](https://example.com)
+<!-- Inclua aqui uma fonte oficial real após verificá-la. -->
 
 [Voltar para a área](../README.md) · [Voltar para a Knowledge Base](../README.md)
