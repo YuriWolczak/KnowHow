@@ -1,0 +1,46 @@
+name: Run unit tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  c-unit:
+    name: C unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure C tests
+        run: cmake -S tests/c -B build/tests-c -DCMAKE_BUILD_TYPE=Debug
+
+      - name: Build C tests
+        run: cmake --build build/tests-c --parallel
+
+      - name: Run CTest
+        run: ctest --test-dir build/tests-c --output-on-failure
+
+  java-unit:
+    name: Java unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+          cache-dependency-path: tests/java/pom.xml
+
+      - name: Run Maven tests
+        run: mvn --batch-mode --file tests/java/pom.xml test

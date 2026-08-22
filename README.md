@@ -97,9 +97,15 @@ O projeto não exige uma ferramenta de publicação específica: os arquivos Mar
 
 ## Validação automática de código
 
-Os exemplos executáveis de [C e Java](./examples/README.md) são compilados e executados automaticamente pelo [workflow do GitHub Actions](./.github/workflows/compile-examples.yml) em cada push para `main`, Pull Request ou execução manual. O C é compilado com o padrão C17 e avisos habilitados; os exemplos Java são compilados com JDK 21.
+Os exemplos executáveis de [C e Java](./examples/README.md) são compilados e executados pelo [workflow de exemplos](./.github/workflows/compile-examples.yml). As suítes unitárias estão documentadas em [tests/](./tests/README.md) e são executadas pelo [workflow de testes](./.github/workflows/test-all.yml). Ambos rodam em cada push para `main`, Pull Request ou execução manual.
 
-Ao adicionar um novo arquivo nessas pastas, mantenha a convenção documentada no README dos exemplos: cada programa deve ter uma entrada executável e terminar sem depender de interação manual.
+Antes de fazer push, execute o mesmo fluxo localmente:
+
+```bash
+bash scripts/test_all.sh
+```
+
+O script valida Markdown e links, verifica o exemplo Web, compila e executa exemplos C e Java e roda CTest e Maven/JUnit. Ao adicionar um novo arquivo às pastas de exemplos ou testes, mantenha as convenções documentadas nos respectivos READMEs.
 
 ## Como contribuir
 
@@ -125,6 +131,8 @@ A V1 estabelece a arquitetura, os padrões editoriais, a navegação e uma prime
 - [ ] Adicionar Linux, Docker e outras tecnologias após validar os padrões.
 - [x] Criar automações de validação de Markdown e links para o fluxo de contribuição.
 - [x] Configurar GitHub Actions para compilar e executar exemplos de C e Java.
+- [x] Criar testes unitários C com CMake/CTest e Java com Maven/JUnit.
+- [x] Criar script local para validar tudo antes do push.
 - [ ] Adicionar compilação automática dos exemplos específicos de outras trilhas.
 
 ## Licenciamento

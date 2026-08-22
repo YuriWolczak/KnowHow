@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+ROOT_DIR="$(git rev-parse --show-toplevel)"
+cd "${ROOT_DIR}"
+
+printf '%s\n' 'Running local checks before push...'
+bash scripts/test_all.sh

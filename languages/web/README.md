@@ -14,6 +14,10 @@ A Web não é uma única linguagem. Nesta Knowledge Base, ela é uma trilha de e
 
 A trilha Web também dependerá de fundamentos de acessibilidade, redes, HTTP e Git conforme avançar. Esses conceitos gerais devem continuar em suas próprias áreas quando não forem específicos de HTML, CSS ou JavaScript.
 
+## Exemplo prático
+
+O exemplo integrado [Study Path](../../examples/web/README.md) combina HTML semântico, CSS responsivo e JavaScript para busca, filtros e acompanhamento de progresso local.
+
 ## Referências
 
 - [MDN — Learn web development](https://developer.mozilla.org/en-US/docs/Learn_web_development)

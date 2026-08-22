@@ -34,11 +34,19 @@ Altere apenas o que pertence à proposta. Preserve a estrutura existente, use li
 
 ### 3. Revise antes do commit
 
-Confira se os links internos existem, se o Markdown renderiza corretamente, se os exemplos são coerentes e se o conteúdo não repete outra página sem necessidade. Use a auditoria local:
+Confira se os links internos existem, se o Markdown renderiza corretamente, se os exemplos são coerentes e se o conteúdo não repete outra página sem necessidade. Para executar todas as validações, incluindo exemplos Web, C, Java, CTest e Maven/JUnit, use:
 
 ```bash
-python3 scripts/check_links.py
+bash scripts/test_all.sh
 ```
+
+Se você quiser que a verificação aconteça automaticamente antes de cada push, ative o hook uma vez:
+
+```bash
+bash scripts/install-hooks.sh
+```
+
+O hook chama `scripts/test_all.sh` e bloqueia o push quando alguma etapa falhar.
 
 ### 4. Crie um commit claro
 

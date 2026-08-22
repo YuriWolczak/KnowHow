@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Exemplo de uma trilha de estudos com HTML, CSS e JavaScript.">
+    <title>Study Path — Knowledge Base</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <p class="eyebrow">Knowledge Base · Exemplo Web</p>
+        <h1>Study Path</h1>
+        <p class="intro">Encontre o próximo assunto e acompanhe seu progresso em uma trilha pequena de programação.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="toolbar" aria-labelledby="filter-title">
+        <div>
+          <p class="eyebrow">Navegação</p>
+          <h2 id="filter-title">Escolha um assunto</h2>
+        </div>
+        <form class="filters" role="search">
+          <label for="topic-search">Buscar assunto</label>
+          <input id="topic-search" name="topic" type="search" placeholder="Ex.: funções" autocomplete="off">
+
+          <label for="level-filter">Nível</label>
+          <select id="level-filter" name="level">
+            <option value="all">Todos os níveis</option>
+            <option value="basic">Básico</option>
+            <option value="intermediate">Intermediário</option>
+          </select>
+        </form>
+        <p id="results-count" class="results" role="status" aria-live="polite"></p>
+      </section>
+
+      <section aria-labelledby="topics-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Trilha recomendada</p>
+            <h2 id="topics-title">Conteúdos</h2>
+          </div>
+          <p id="progress-summary" class="progress-summary">0 concluídos</p>
+        </div>
+
+        <div class="topic-grid" id="topic-list">
+          <article class="topic-card" data-topic-card data-level="basic" data-search="programação lógica primeiros passos">
+            <span class="tag tag-basic">Básico</span>
+            <h3>O que é programação?</h3>
+            <p>Entenda instruções, entrada, processamento e saída antes de escolher uma linguagem.</p>
+            <button class="complete-button" type="button" data-complete>Marcar como concluído</button>
+          </article>
+
+          <article class="topic-card" data-topic-card data-level="basic" data-search="variáveis tipos dados valores">
+            <span class="tag tag-basic">Básico</span>
+            <h3>Variáveis e tipos</h3>
+            <p>Aprenda a nomear dados e a distinguir texto, números, booleanos e coleções.</p>
+            <button class="complete-button" type="button" data-complete>Marcar como concluído</button>
+          </article>
+
+          <article class="topic-card" data-topic-card data-level="basic" data-search="condicionais decisões lógica">
+            <span class="tag tag-basic">Básico</span>
+            <h3>Condicionais</h3>
+            <p>Modele regras e escolha caminhos diferentes conforme as entradas do programa.</p>
+            <button class="complete-button" type="button" data-complete>Marcar como concluído</button>
+          </article>
+
+          <article class="topic-card" data-topic-card data-level="intermediate" data-search="testes qualidade software">
+            <span class="tag tag-intermediate">Intermediário</span>
+            <h3>Testes automatizados</h3>
+            <p>Verifique comportamentos esperados e descubra regressões antes de publicar mudanças.</p>
+            <button class="complete-button" type="button" data-complete>Marcar como concluído</button>
+          </article>
+        </div>
+        <p id="empty-state" class="empty-state" hidden>Nenhum conteúdo corresponde aos filtros atuais.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Exemplo educacional sem servidor. O progresso é mantido apenas enquanto esta página está aberta.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
